@@ -265,11 +265,13 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   cursor: pointer;
   padding: 8px;
+  margin-left: auto;
+  z-index: 1002;
 }
 
 .hamburger span {
   display: block;
-  width: 26px;
+  width: 28px;
   height: 3px;
   background: var(--white);
   border-radius: 2px;
@@ -283,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
+  transform: rotate(-45deg) translate(6px, -7px);
 }
 
 
@@ -906,17 +908,17 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav {
   position: fixed;
   inset: 0;
-  background: rgba(1, 15, 11, .97);
+  background: rgba(1, 15, 11, .98);
   backdrop-filter: blur(16px);
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 24px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s ease;
+  transition: opacity .35s ease;
 }
 
 .mobile-nav.open {
@@ -926,7 +928,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav a {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--white);
   text-transform: uppercase;
@@ -960,12 +962,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
-  .hero { min-height: auto; padding: 80px 0 60px; }
-  .hero h1 { font-size: 2.2rem; }
+  .hero { min-height: auto; padding: 60px 0 50px; }
+  .hero h1 { font-size: 2.1rem; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
-  .hero__trust { flex-direction: column; gap: 12px; }
-  .stats-bar .container { grid-template-columns: 1fr 1fr; }
+  .hero__trust { flex-direction: column; gap: 16px; align-items: flex-start; }
+  
+  .stats-bar .container { grid-template-columns: 1fr; gap: 32px; }
   .top-bar__right { display: none; }
   .map-section iframe { height: 280px; }
+  
+  /* Global Spacing Fixes */
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
+  .section__title { font-size: 1.7rem; }
+  
+  /* Services Fixes */
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  .service-card { padding: 28px 24px; }
+  .service-card__number { font-size: 4rem; top: -5px; right: 12px; }
+  
+  /* Form Fixes */
+  .contact__form { padding: 28px 20px; }
+  
+  /* About/Why Us Fixes */
+  .about-grid { gap: 32px; }
+  .why-card { padding: 28px 20px; }
+  
+  /* Projects Page Mobile Fixes */
+  .page-header { padding: 100px 0 60px; }
+  .page-header h1 { font-size: 2rem; }
 }
