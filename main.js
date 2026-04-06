@@ -84,4 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
       revealObserver.observe(el);
     });
   }
+
+  /* ═══════════════════════════════════════════════
+     BACK TO TOP
+     ═══════════════════════════════════════════════ */
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
