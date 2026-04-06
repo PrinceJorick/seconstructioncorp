@@ -169,8 +169,18 @@
           <div class="about__text">
             <p>We opened our doors in Harmon back in 2013. The goal was simple. We wanted to handle the tough jobs keeping Guam moving forward.</p>
             <p>We have partnered with major contractors to tackle complex HVAC and electrical work since then. You get the strength of a large operation. You also get the personal care of a local crew.</p>
+            
+            <div class="about__partners">
+              <span>Past Work Proudly Delivered For:</span>
+              <div class="about__partners-logos">
+                <div class="partner-tag">JMI Edison</div>
+                <div class="partner-tag">Chugach</div>
+                <div class="partner-tag">SK Construction</div>
+                <div class="partner-tag">Trane Guam</div>
+              </div>
+            </div>
             <p>We know island timelines are tricky. Shipping delays happen. We plan ahead to keep your project moving. We give it to you straight and get the work done right.</p>
-            <p>[Founder Name] started SE Construction to raise the standard of island contracting. They review every major project to ensure the quality never slips.</p>
+            <p>Sergio R. Llarena started SE Construction to raise the standard of island contracting. They review every major project to ensure the quality never slips.</p>
           </div>
         </div>
         <div class="testimonial-card reveal reveal-delay-3">
@@ -273,21 +283,49 @@
         
         <div class="contact__form reveal reveal-delay-3">
           <form id="contact-form" action="#" method="POST">
-            <div class="form-group">
-              <label for="form-name">Your Full Name</label>
-              <input type="text" id="form-name" name="name" placeholder="Your Full Name" required>
-            </div>
-            <div class="form-group">
-              <label for="form-phone">Best Phone Number</label>
-              <input type="tel" id="form-phone" name="phone" placeholder="Best Phone Number" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Your Full Name</label>
+                <input type="text" id="form-name" name="name" placeholder="Your Full Name" required>
+              </div>
+              <div class="form-group">
+                <label for="form-phone">Best Phone Number</label>
+                <input type="tel" id="form-phone" name="phone" placeholder="Best Phone Number" required>
+              </div>
             </div>
             <div class="form-group">
               <label for="form-email">Your Email Address</label>
               <input type="email" id="form-email" name="email" placeholder="Your Email Address" required>
             </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-service">Service Required</label>
+                <div class="select-wrapper">
+                  <select id="form-service" name="service" required>
+                    <option value="" disabled selected>Select Service Type</option>
+                    <option value="Mechanical">Mechanical (HVAC)</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Fire Protection">Fire Protection</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-size">Project Size Range</label>
+                <div class="select-wrapper">
+                  <select id="form-size" name="size" required>
+                    <option value="" disabled selected>Rough Budget Range</option>
+                    <option value="Under $50k">Under $50k</option>
+                    <option value="$50k - $250k">$50k - $250k</option>
+                    <option value="$250k - $1M">$250k - $1M</option>
+                    <option value="$1M+">$1M+</option>
+                  </select>
+                </div>
+              </div>
+            </div>
             <div class="form-group">
               <label for="form-message">Tell us what you need built</label>
-              <textarea id="form-message" name="message" placeholder="Tell us what you need built" required></textarea>
+              <textarea id="form-message" name="message" placeholder="Provide a brief overview of your project requirements" required></textarea>
             </div>
             <button type="submit" class="btn btn--primary" style="width:100%;padding:16px;font-size:1rem">Send Details (24-Hour Reply)</button>
             <p class="form-reassure">Your contact information is strictly confidential.</p>
