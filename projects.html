@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | SE Construction Corp</title>
+  <meta name="description" content="View the extensive portfolio of HVAC, Electrical, and Fire Protection projects delivered by SE Construction Corp across Guam.">
+  
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ══════ PROJECTS PAGE SPECIFIC STYLES ══════ */
+    .page-header {
+      position: relative;
+      overflow: hidden;
+      padding: 140px 0 80px;
+      border-bottom: 1px solid rgba(0, 166, 81, .15);
+      text-align: center;
+    }
+    
+    .page-header h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .page-header p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--neutral-300);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .partners-list {
+      color: var(--green-600);
+      font-weight: 500;
+    }
+
+    .projects-container {
+      padding: 80px 0 120px;
+    }
+
+    .project-list-wrapper {
+      background: var(--dark-800);
+      border: 1px solid rgba(0, 166, 81, .15);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, .05);
+      transition: background .2s ease;
+    }
+
+    .project-item:hover {
+      background: rgba(0, 166, 81, .05);
+    }
+
+    .project-item:last-child {
+      border-bottom: none;
+    }
+
+    .project-name {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    .project-scope {
+      color: var(--green-600);
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background: rgba(0, 166, 81, .08);
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 24px;
+      }
+      .project-scope {
+        text-align: left;
+        background: transparent;
+        padding: 0;
+        color: var(--green-600);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════ NAVBAR ══════ -->
+  <div class="top-bar" id="top-bar">
+    <div class="container">
+      <span>Serving Guam Since 2013 — Licensed MEP Contractor</span>
+      <div class="top-bar__right">
+        <a href="mailto:anabel@seconstructioncorp.com">anabel@seconstructioncorp.com</a>
+        <a href="tel:+16716469098">(671) 646-9098</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="SE Construction Corp Home">
+        <img src="assets/images/logo.png" alt="SE Construction Corp Logo" class="logo__img">
+        <span>SE Construction Corp.</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="projects.html" style="color: var(--green-600);">Projects</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a href="index.html#contact" class="btn btn--primary nav-cta">Get Your Free Estimate</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════ MOBILE NAV ══════ -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html#services" class="mobile-nav-link">Services</a>
+    <a href="index.html#about" class="mobile-nav-link">About</a>
+    <a href="projects.html" class="mobile-nav-link">Projects</a>
+    <a href="index.html#why-us" class="mobile-nav-link">Why Us</a>
+    <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+    <a href="index.html#contact" class="btn btn--primary btn--lg">Get Your Free Estimate</a>
+  </div>
+
+  <!-- ══════ PAGE HEADER ══════ -->
+  <header class="page-header">
+    <div class="hero__bg"></div>
+    <div class="container reveal" style="position: relative; z-index: 2;">
+      <div class="section__eyebrow" style="margin-bottom: 16px;">Past Work</div>
+      <h1>Our Completed Projects</h1>
+      <p>Through partnership with <span class="partners-list">JMI Edison, Chugach, SK Construction, Coretech, Pacific RIM, Future World, WM Engineering Services, LLC, Tutujan Hill Group, LLC, Trane Guam, 5M Construction, and Global Construction</span>, SE Construction Corporation has satisfactorily completed and delivered complex MEP systems across Guam and the Marianas.</p>
+    </div>
+  </header>
+
+  <!-- ══════ PROJECTS LIST ══════ -->
+  <section class="projects-container">
+    <div class="container">
+      <div class="project-list-wrapper reveal reveal-delay-1">
+        
+        <div class="project-item">
+          <div class="project-name">North Tipalao Housing, Naval Base (96 Units)</div>
+          <div class="project-scope">3-Ton & 4-Ton A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Apra Heights Housing, Naval Base (55 Units)</div>
+          <div class="project-scope">3-Ton & 4-Ton A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Lockwood Housing, Naval Base (70 Units)</div>
+          <div class="project-scope">3-Ton & 4-Ton A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">North Tipalao Housing, Naval Base (108 Units)</div>
+          <div class="project-scope">3-Ton & 4-Ton A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Apra Heights Housing PH II, Naval Base (59 Units)</div>
+          <div class="project-scope">3-Ton & 4-Ton A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Bldg. 17 (Naval Base)</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">DODEA Naval Base (McCool)</div>
+          <div class="project-scope">Cooling Tower</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">DODEA Andersen AFB</div>
+          <div class="project-scope">AHU/VFD</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">Conveyor Installation</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">Generator Maintenance</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">Waste Line System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">HC5 (Fire Pump)</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">FS MAIN LINE Piping Conversion</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam International Airport Authority</div>
+          <div class="project-scope">Exhaust System (Smoking Area)</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">LDS Temple</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Ironwood Phase II</div>
+          <div class="project-scope">Electrical System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">MRS Andersen AFB</div>
+          <div class="project-scope">Electrical System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">United Hangar</div>
+          <div class="project-scope">Recondition Sliding Door</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">JP Superstore</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Leo Palace</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">GTA CLS-2</div>
+          <div class="project-scope">CRAC Units / Chiller Installation & Piping System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">GTA CLS-2</div>
+          <div class="project-scope">Fire Protection System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">NOAA</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">GSA/TI</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">ASIG / PACAIR</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">MidPac Warehouse</div>
+          <div class="project-scope">PCU Installation</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">SPOT 11</div>
+          <div class="project-scope">FS UPGRADE</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Hyatt</div>
+          <div class="project-scope">Chiller Overhauling</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">ITC</div>
+          <div class="project-scope">Mechanical Systems Improvement / Maintenance</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Laundry Solutions</div>
+          <div class="project-scope">Fire Protection System Upgrade</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">GMRC</div>
+          <div class="project-scope">Kitchen Equipment Installation</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">USCIS</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">IHOP Guam</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Blue Water Homes A/C System</div>
+          <div class="project-scope">(Saipan, USA)</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Rolex (The Plaza)</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">LongChamp (The Plaza)</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Fiesta Resort Theatre</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Crust Pizza</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Guam Plaza</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Joinus Restaurant</div>
+          <div class="project-scope">Exhaust System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Chili's Restaurant-Tumon</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Nana's Cafe</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Bayview Hotel</div>
+          <div class="project-scope">A/C System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Wendy's (Naval Base, Dededo & Tamuning)</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Dickerson & Quinn</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Payless Dededo</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Paradise Fitness Tumon</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Tiyan Gym</div>
+          <div class="project-scope">A/C & Ventilation System</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ GET STARTED SECTION ══════ -->
+  <section class="section section--alt" style="text-align: center; border-top: 1px solid rgba(0, 166, 81, .15);">
+    <div class="container reveal">
+      <h2 class="section__title" style="margin-bottom: 24px;">Ready to start your next project?</h2>
+      <a href="index.html#contact" class="btn btn--primary btn--lg">Get Your Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer" id="footer">
+    <div class="container reveal">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="SE Construction Corp Logo" style="height: 36px; width: auto; margin-bottom: 8px;">
+          <span style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); text-transform: uppercase;">SE Construction Corp.</span>
+        </a>
+        <p style="margin-top: 12px;">Licensed MEP contractor serving Guam since 2013. Mechanical, Electrical, Plumbing, and Fire Protection services for commercial and industrial projects.</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer__contact">
+        <p><a href="tel:+16716469098">(671) 646-9098</a></p>
+        <p><a href="mailto:anabel@seconstructioncorp.com">anabel@seconstructioncorp.com</a></p>
+        <p>189 Siket St., Harmon Industrial Park, Tamuning, Guam</p>
+      </div>
+    </div>
+    <div class="container reveal reveal-delay-2">
+      <div class="footer__bottom">&copy; 2026 SE Construction Corporation. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
