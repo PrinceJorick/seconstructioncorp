@@ -32,6 +32,14 @@
   --radius: 6px;
   --radius-lg: 12px;
   --white: #ffffff;
+
+  /* Neutral & Dark colors (re-adding) */
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --dark-700: #1e293b;
+  --dark-800: #0f172a;
+  --dark-900: #020617;
 }
 
 html, body {
@@ -908,7 +916,7 @@ h1, h2, h3, h4, h5, h6 {
 .projects-category-title {
   font-family: var(--font-display);
   font-size: 2rem;
-  color: var(--white);
+  color: var(--text-primary);
   margin-bottom: 24px;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(0, 166, 81, .2);
@@ -925,8 +933,8 @@ h1, h2, h3, h4, h5, h6 {
 .photo-card {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(0, 166, 81, .15);
-  background: var(--dark-800);
+  border: 1px solid var(--border-color);
+  background: #ffffff;
   transition: transform .3s, box-shadow .3s;
 }
 
@@ -949,7 +957,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .photo-card__title {
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 4px;
 }

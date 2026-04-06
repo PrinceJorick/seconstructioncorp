@@ -25,14 +25,13 @@
     
     .page-header h1 {
       font-size: clamp(2.4rem, 5vw, 4rem);
-      color: var(--white);
-      margin-bottom: 24px;
+      color: var(--text-primary);
     }
     
     .page-header p {
       max-width: 800px;
       margin: 0 auto;
-      color: var(--neutral-300);
+      color: var(--text-secondary);
       font-size: 1.1rem;
       line-height: 1.8;
     }
@@ -47,9 +46,10 @@
     }
 
     .project-list-wrapper {
-      background: var(--dark-800);
-      border: 1px solid rgba(0, 166, 81, .15);
+      background: #ffffff;
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
       overflow: hidden;
     }
 
@@ -58,7 +58,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 32px;
-      border-bottom: 1px solid rgba(255, 255, 255, .05);
       transition: background .2s ease;
     }
 
@@ -66,13 +65,11 @@
       background: rgba(0, 166, 81, .05);
     }
 
-    .project-item:last-child {
-      border-bottom: none;
-    }
+
 
     .project-name {
       font-weight: 700;
-      color: var(--white);
+      color: var(--text-primary);
       font-size: 1.1rem;
     }
 
@@ -159,7 +156,7 @@
   </header>
 
   <!-- ══════ PROJECTS LIST ══════ -->
-  <section class="projects-container">
+  <section class="projects-container section--alt">
     <div class="container">
       
       <!-- GALLERY -->
@@ -316,6 +313,12 @@
       <div class="footer__bottom">&copy; 2026 SE Construction Corporation. All rights reserved.</div>
     </div>
   </footer>
+
+
+  <!-- ══════ BACK TO TOP ══════ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
   <script src="main.js"></script>
 </body>
