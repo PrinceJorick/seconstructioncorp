@@ -31,6 +31,7 @@
 
   --radius: 6px;
   --radius-lg: 12px;
+  --white: #ffffff;
 }
 
 html, body {
@@ -178,6 +179,17 @@ h1, h2, h3, h4, h5, h6 {
 .logo__img {
   height: 36px;
   width: auto;
+  transition: height 0.3s ease;
+}
+
+.logo__text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: font-size 0.3s ease;
 }
 
 /* ─── Nav Links ─── */
@@ -1099,6 +1111,9 @@ h1, h2, h3, h4, h5, h6 {
   .navbar { top: 0; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
+  .logo__img { height: 30px; }
+  .logo__text { font-size: 1.25rem; }
+  .logo { gap: 8px; }
   .about-grid { grid-template-columns: 1fr; }
   .testimonial-card { position: static; }
   .why-grid { grid-template-columns: 1fr; }
@@ -1121,7 +1136,24 @@ h1, h2, h3, h4, h5, h6 {
   .hero__trust { flex-direction: column; gap: 16px; align-items: flex-start; }
   
   .stats-bar .container { grid-template-columns: 1fr; gap: 32px; }
-  .top-bar__right { display: none; }
+  
+  .top-bar { padding: 10px 0; }
+  .top-bar .container { flex-direction: column; text-align: center; gap: 6px; }
+  .top-bar__right { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 12px; 
+    font-size: 0.75rem;
+  }
+  .top-bar a { white-space: nowrap; }
+
+  .navbar .container { height: 60px; }
+  .logo__img { height: 26px; }
+  .logo__text { font-size: 1.15rem; letter-spacing: 0.02em; }
+  .hamburger { margin-left: 8px; padding: 6px; }
+  .hamburger span { width: 24px; height: 2.5px; }
+
   .map-section iframe { height: 280px; }
   
   /* Global Spacing Fixes */
