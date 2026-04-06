@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const origText = btn.textContent;
       
       btn.textContent = 'Message Sent!';
-      btn.style.background = 'var(--green-800)';
+      btn.style.background = 'var(--green-900)';
       
       setTimeout(function() {
         btn.textContent = origText;
