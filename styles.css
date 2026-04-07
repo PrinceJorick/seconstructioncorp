@@ -1047,37 +1047,62 @@ h1, h2, h3, h4, h5, h6 {
   padding: 48px 0 24px;
 }
 
+.footer {
+  background: #030d0c;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 80px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(0, 166, 81, .02) 40px, rgba(0, 166, 81, .02) 41px);
+  pointer-events: none;
+}
+
 .footer .container {
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
   gap: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer__brand {
-  max-width: 320px;
+  max-width: 380px;
 }
 
 .footer__brand .logo {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.footer__brand .logo__text {
+  color: #ffffff;
 }
 
 .footer__brand p {
-  color: var(--neutral-400);
-  font-size: .9rem;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: .95rem;
+  line-height: 1.7;
 }
 
 .footer__links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer__links a {
-  color: var(--neutral-400);
+  color: rgba(255, 255, 255, 0.8);
   font-size: .9rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
   transition: color .2s;
 }
 
@@ -1086,12 +1111,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__contact {
-  color: var(--neutral-400);
-  font-size: .9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: .95rem;
+  line-height: 1.8;
 }
 
 .footer__contact a {
-  color: var(--neutral-300);
+  color: #ffffff;
+  font-weight: 600;
   transition: color .2s;
 }
 
@@ -1101,17 +1128,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__bottom {
   text-align: center;
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, .06);
-  font-size: .82rem;
-  color: var(--neutral-500);
+  margin-top: 60px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  font-size: .85rem;
+  color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 1;
 }
 
 
-/* ═══════════════════════════════════════════════
-   MOBILE NAV OVERLAY
-   ═══════════════════════════════════════════════ */
 .mobile-nav {
   position: fixed;
   inset: 0;
@@ -1235,20 +1261,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--green-600);
 }
 .footer {
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
   padding: 80px 0 40px;
 }
-.footer .logo span {
-  color: var(--text-primary) !important;
-}
-.footer__links a:hover {
-  color: var(--green-600);
-}
-.footer__bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 24px;
-}
+
 
 /* ═══════════════════════════════════════════════
    BACK TO TOP BUTTON
